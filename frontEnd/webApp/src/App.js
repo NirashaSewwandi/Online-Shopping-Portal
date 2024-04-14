@@ -366,6 +366,7 @@ function App() {
       } else {
         setRole(application_roles);
       }
+      setRole("Customer");
     } catch (error) {
       console.log(error);
     }

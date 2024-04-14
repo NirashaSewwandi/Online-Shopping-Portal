@@ -1,5 +1,5 @@
 export const userRoles = {
-  USER: "User-G2",
+  USER: "Customer",
   GRAMA: "Grama-Sewaka-G2",
 };
 
