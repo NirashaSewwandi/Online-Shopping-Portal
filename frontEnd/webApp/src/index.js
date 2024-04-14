@@ -28,10 +28,12 @@ import { ContextProvider } from "./UserContext";
 
 
 const config = {
-  signInRedirectURL: process.env.REACT_APP_SIGN_IN_REDIRECT_URL,
-  signOutRedirectURL: process.env.REACT_APP_SIGN_OUT_REDIRECT_URL,
-  clientID: process.env.REACT_APP_CLIENT_ID,
-  baseUrl: process.env.REACT_APP_BASE_URL,
+  signInRedirectURL:
+    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/dashboard",
+  signOutRedirectURL:
+    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev",
+  clientID: "sLaZq4Byn23qXR0vHn9o33DlF88a",
+  baseUrl: "https://api.asgardeo.io/t/sns24",
   scope: [
     // "openid",
     "profile",
