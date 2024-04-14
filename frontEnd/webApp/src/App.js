@@ -106,7 +106,7 @@ export default function App() {
   const navigate = useNavigate();
   setupAxiosInterceptors(() => {
     authContext.logout();
-    navigate("/auth/login");
+    navigate("/dashboard");
   });
 
   // Setting the dir attribute for the body element
@@ -247,7 +247,7 @@ export default function App() {
             )}
             {layout === "vr" && <Configurator />}
             <Routes>
-              <Route path="login" element={<Navigate to="/auth/login" />} />
+              <Route path="login" element={<Navigate to="/dashboard" />} />
               <Route path="register" element={<Navigate to="/auth/register" />} />
               <Route path="forgot-password" element={<Navigate to="/auth/forgot-password" />} />
               {getRoutes(routes)}

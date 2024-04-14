@@ -26,7 +26,7 @@ import BasicLayoutLanding from "layouts/authentication/components/BasicLayoutLan
 // Images
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 
-import AuthService from "services/auth-service";
+import AuthService from "../../services/auth-service";
 import { AuthContext } from "context";
 
 function Login() {
