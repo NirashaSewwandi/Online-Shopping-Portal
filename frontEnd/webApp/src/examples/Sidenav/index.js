@@ -46,9 +46,10 @@ import {
   setTransparentSidenav,
   setWhiteSidenav,
 } from "context";
+import { useController } from "UserContext";
 
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
-  const [controller, dispatch] = useMaterialUIController();
+  const [controller, dispatch] = useController();
   const { miniSidenav, transparentSidenav, whiteSidenav, darkMode, sidenavColor } = controller;
   const location = useLocation();
   const collapseName = location.pathname.replace("/", "");

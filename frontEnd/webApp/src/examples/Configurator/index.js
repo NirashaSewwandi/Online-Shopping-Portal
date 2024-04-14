@@ -39,7 +39,6 @@ import ConfiguratorRoot from "examples/Configurator/ConfiguratorRoot";
 
 // Material Dashboard 2 React context
 import {
-  useMaterialUIController,
   setOpenConfigurator,
   setTransparentSidenav,
   setWhiteSidenav,
@@ -47,9 +46,10 @@ import {
   setSidenavColor,
   setDarkMode,
 } from "context";
+import { useController } from "UserContext";
 
 function Configurator() {
-  const [controller, dispatch] = useMaterialUIController();
+  const [controller, dispatch] = useController();
   const {
     openConfigurator,
     fixedNavbar,

@@ -14,14 +14,17 @@ Coded by www.creative-tim.com
 */
 
 import React from "react";
+import ReactDOM from "react-dom/client";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "App";
+import reportWebVitals from "./reportWebVitals";
 import { AuthProvider } from "@asgardeo/auth-react";
 import { AuthContextProvider } from "context";
+import { useState, useEffect, useMemo, useContext } from "react";
 
 // Material Dashboard 2 React Context Provider
-import { MaterialUIControllerProvider } from "context";
+import { ContextProvider } from "./UserContext";
 
 
 const config = {
@@ -30,8 +33,8 @@ const config = {
   clientID: process.env.REACT_APP_CLIENT_ID,
   baseUrl: process.env.REACT_APP_BASE_URL,
   scope: [
-    "openid",
-    // "profile",
+    // "openid",
+    "profile",
     // "app_roles",
     // "urn:interns:identitycheckserviceident:check_identity urn:interns:policecheckservicepolicev:police_ver_check urn:interns:addresscheckserviceaddres:check_address urn:interns:gramaapiservicerequests91:reqeust_reaction urn:interns:gramaapiservicerequests91:get_all_requests urn:interns:gramaapiservicerequests91:post_a_request",
   ],
@@ -46,14 +49,26 @@ const config = {
 
 
 const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+const root = ReactDOM.createRoot(rootElement);
 
 root.render(
-  <BrowserRouter>
-    <AuthProvider config={config}>
-      <MaterialUIControllerProvider>
-        <App />
-      </MaterialUIControllerProvider>
-    </AuthProvider>
-  </BrowserRouter>
+  <React.StrictMode>
+    <ContextProvider>
+      <AuthProvider config={config}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="*" element={<App />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
+    </ContextProvider>
+  </React.StrictMode>
+  // <BrowserRouter>
+  //   <AuthProvider config={config}>
+  //     <MaterialUIControllerProvider>
+  //       <App />
+  //     </MaterialUIControllerProvider>
+  //   </AuthProvider>
+  // </BrowserRouter>
 );
+reportWebVitals();

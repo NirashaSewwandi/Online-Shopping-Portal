@@ -22,14 +22,14 @@ import PropTypes from "prop-types";
 import MDTypographyRoot from "components/MDTypography/MDTypographyRoot";
 
 // Material Dashboard 2 React contexts
-import { useMaterialUIController } from "context";
+import { useController } from "../../UserContext";
 
 const MDTypography = forwardRef(
   (
     { color, fontWeight, textTransform, verticalAlign, textGradient, opacity, children, ...rest },
     ref
   ) => {
-    const [controller] = useMaterialUIController();
+    const [controller] = useController();
     const { darkMode } = controller;
 
     return (

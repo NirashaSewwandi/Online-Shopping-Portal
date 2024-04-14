@@ -34,10 +34,10 @@ import {
 } from "examples/Sidenav/styles/sidenavCollapse";
 
 // Material Dashboard 2 React context
-import { useMaterialUIController } from "context";
+import { useController } from "UserContext";
 
 function SidenavCollapse({ icon, name, active, ...rest }) {
-  const [controller] = useMaterialUIController();
+  const [controller] = useController();
   const { miniSidenav, transparentSidenav, whiteSidenav, darkMode, sidenavColor } = controller;
 
   return (

@@ -49,18 +49,19 @@ import {
 
 // Material Dashboard 2 React context
 import {
-  useMaterialUIController,
+  
   setTransparentNavbar,
   setMiniSidenav,
   setOpenConfigurator,
 } from "context";
 import MDButton from "components/MDButton";
 import { AuthContext } from "context";
+import { useController } from "UserContext";
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const authContext = useContext(AuthContext);
   const [navbarType, setNavbarType] = useState();
-  const [controller, dispatch] = useMaterialUIController();
+  const [controller, dispatch] = useController();
   const { miniSidenav, transparentNavbar, fixedNavbar, openConfigurator, darkMode } = controller;
   const [openMenu, setOpenMenu] = useState(false);
   const route = useLocation().pathname.split("/").slice(1);

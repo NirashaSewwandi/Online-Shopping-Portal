@@ -38,12 +38,12 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Material Dashboard 2 React context
-import { useMaterialUIController } from "context";
+import { useController } from "UserContext";
 import { AuthContext } from "context";
 
 function DefaultNavbar({ transparent, light, action }) {
   const authContext = useContext(AuthContext);
-  const [controller] = useMaterialUIController();
+  const [controller] = useController();
   const { darkMode } = controller;
 
   const [mobileNavbar, setMobileNavbar] = useState(false);
