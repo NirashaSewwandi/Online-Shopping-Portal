@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import Home from "./page.tsx";
+import Home from "./app/page.tsx";
 
 function App() {
   <h1>hi</h1>
