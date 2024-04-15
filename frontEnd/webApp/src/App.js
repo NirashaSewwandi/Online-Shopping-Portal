@@ -330,7 +330,7 @@ import React from "react";
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import Login from "./auth/login";
 // import Request from "./Components/Request/Request";
-// import NotFound from "./Components/Common/NotFound";
+import NotFound from "./components/NotFound";
 // import Contact from "./Components/Contact/Contact";
 // import Status from "./Components/User/Status";
 
@@ -360,13 +360,14 @@ function App() {
   const getBasicInfo = async () => {
     try {
       const response = await getDecodedIDToken();
+      console.log(response+"---");
       const { application_roles } = response;
       if (Array.isArray(application_roles)) {
         setRole(application_roles[0]);
       } else {
         setRole(application_roles);
       }
-      setRole("Customer");
+      // setRole("Customer");
       console.log(role);
 
     } catch (error) {
@@ -376,6 +377,7 @@ function App() {
 
   useEffect(() => {
     state?.isAuthenticated && getBasicInfo();
+    console.log(state);
   });
 
   useEffect(() => {
