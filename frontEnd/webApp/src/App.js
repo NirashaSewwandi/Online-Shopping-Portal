@@ -367,6 +367,8 @@ function App() {
         setRole(application_roles);
       }
       setRole("Customer");
+      console.log(role);
+
     } catch (error) {
       console.log(error);
     }
@@ -391,9 +393,9 @@ function App() {
     <div>
       <Routes>
         <Route index element={<Login />}></Route>
-         {/* <Route path="/error" element={<NotFound />} /> */}
+        <Route path="/error" element={<NotFound />} /> 
         <Route
-          path="/dashboard"
+          path="/user/me"
           element={
             <ProtectedRoute redirectPath="/" authRole={userRoles.USER}>
               <Dashboard />

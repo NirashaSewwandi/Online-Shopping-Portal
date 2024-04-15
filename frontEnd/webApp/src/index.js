@@ -35,9 +35,10 @@ const config = {
   clientID: "sLaZq4Byn23qXR0vHn9o33DlF88a",
   baseUrl: "https://api.asgardeo.io/t/sns24",
   scope: [
-    // "openid",
+    "openid",
     "profile",
-    // "app_roles",
+    "app_roles",
+    "groups",
     // "urn:interns:identitycheckserviceident:check_identity urn:interns:policecheckservicepolicev:police_ver_check urn:interns:addresscheckserviceaddres:check_address urn:interns:gramaapiservicerequests91:reqeust_reaction urn:interns:gramaapiservicerequests91:get_all_requests urn:interns:gramaapiservicerequests91:post_a_request",
   ],
   // resourceServerURLs: [
