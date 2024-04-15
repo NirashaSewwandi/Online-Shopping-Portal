@@ -26,7 +26,7 @@ const config = {
   signInRedirectURL:
     "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
   signOutRedirectURL:
-    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/auth/login",
+    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
   clientID: "sLaZq4Byn23qXR0vHn9o33DlF88a",
   baseUrl: "https://api.asgardeo.io/t/sns24",
   scope: [
