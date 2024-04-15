@@ -25,10 +25,10 @@ import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 
 // Material Dashboard 2 React context
-import { useController } from "UserContext";
+import { useMaterialUIController } from "context";
 
 function Bill({ name, company, email, vat, noGutter }) {
-  const [controller] = useController();
+  const [controller] = useMaterialUIController();
   const { darkMode } = controller;
 
   return (

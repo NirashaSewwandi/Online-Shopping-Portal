@@ -48,7 +48,7 @@ import SignUp from "layouts/authentication/sign-up";
 import UserProfile from "layouts/user-profile";
 import UserManagement from "layouts/user-management";
 
-import Login from "./auth/login/index.js";
+import Login from "auth/login";
 import Register from "auth/register";
 import ForgotPassword from "auth/forgot-password";
 import ResetPassword from "auth/reset-password";

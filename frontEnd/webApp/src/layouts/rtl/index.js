@@ -38,10 +38,10 @@ import Projects from "layouts/rtl/components/Projects";
 import OrdersOverview from "layouts/rtl/components/OrdersOverview";
 
 // Material Dashboard 2 React contexts
-import {  setDirection } from "context";
-import { useController } from "UserContext";
+import { useMaterialUIController, setDirection } from "context";
+
 function RTL() {
-  const [, dispatch] = useController();
+  const [, dispatch] = useMaterialUIController();
   const { sales, tasks } = reportsLineChartData;
 
   // Changing the direction to rtl

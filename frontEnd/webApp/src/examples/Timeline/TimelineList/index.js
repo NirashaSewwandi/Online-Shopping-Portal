@@ -24,13 +24,13 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
 // Material Dashboard 2 React components
-import { useController } from "UserContext";
+import { useMaterialUIController } from "context";
 
 // Timeline context
 import { TimelineProvider } from "examples/Timeline/context";
 
 function TimelineList({ title, dark, children }) {
-  const [controller] = useController();
+  const [controller] = useMaterialUIController();
   const { darkMode } = controller;
 
   return (

@@ -14,24 +14,19 @@ Coded by www.creative-tim.com
 */
 
 import React from "react";
-import ReactDOM from "react-dom/client";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "App";
-import reportWebVitals from "./reportWebVitals";
-import { AuthProvider } from "@asgardeo/auth-react";
 import { AuthContextProvider } from "context";
-import { useState, useEffect, useMemo, useContext } from "react";
+import { AuthProvider } from "@asgardeo/auth-react";
 
 // Material Dashboard 2 React Context Provider
-import { ContextProvider } from "./UserContext";
-
-
+import { MaterialUIControllerProvider } from "context";
 const config = {
   signInRedirectURL:
-    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev",
+    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
   signOutRedirectURL:
-    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev",
+    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
   clientID: "sLaZq4Byn23qXR0vHn9o33DlF88a",
   baseUrl: "https://api.asgardeo.io/t/sns24",
   scope: [
@@ -50,28 +45,15 @@ const config = {
   // ],
 };
 
-
 const rootElement = document.getElementById("root");
-const root = ReactDOM.createRoot(rootElement);
+const root = createRoot(rootElement);
 
 root.render(
-  <React.StrictMode>
-    <ContextProvider>
-      <AuthProvider config={config}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="*" element={<App />}></Route>
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
-    </ContextProvider>
-  </React.StrictMode>
-  // <BrowserRouter>
-  //   <AuthProvider config={config}>
-  //     <MaterialUIControllerProvider>
-  //       <App />
-  //     </MaterialUIControllerProvider>
-  //   </AuthProvider>
-  // </BrowserRouter>
+  <BrowserRouter>
+    <AuthProvider config={config}>
+      <MaterialUIControllerProvider>
+        <App />
+      </MaterialUIControllerProvider>
+    </AuthProvider>
+  </BrowserRouter>
 );
-reportWebVitals();

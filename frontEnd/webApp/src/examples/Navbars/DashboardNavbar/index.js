@@ -49,19 +49,19 @@ import {
 
 // Material Dashboard 2 React context
 import {
-  
+  useMaterialUIController,
   setTransparentNavbar,
   setMiniSidenav,
   setOpenConfigurator,
 } from "context";
 import MDButton from "components/MDButton";
 import { AuthContext } from "context";
-import { useController } from "UserContext";
+import { useAuthContext } from "@asgardeo/auth-react";
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const authContext = useContext(AuthContext);
   const [navbarType, setNavbarType] = useState();
-  const [controller, dispatch] = useController();
+  const [controller, dispatch] = useMaterialUIController();
   const { miniSidenav, transparentNavbar, fixedNavbar, openConfigurator, darkMode } = controller;
   const [openMenu, setOpenMenu] = useState(false);
   const route = useLocation().pathname.split("/").slice(1);
@@ -129,10 +129,12 @@ function DashboardNavbar({ absolute, light, isMini }) {
       return colorValue;
     },
   });
+  const { signOut } = useAuthContext();
 
   const handleLogOut = async () => {
-    const response = await AuthService.logout();
-    authContext.logout();
+    // const response = await AuthService.logout();
+    // authContext.logout();
+    signOut();
   };
 
   return (

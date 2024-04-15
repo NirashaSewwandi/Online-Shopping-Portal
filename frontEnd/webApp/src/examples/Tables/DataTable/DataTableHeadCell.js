@@ -23,10 +23,10 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 
 // Material Dashboard 2 React contexts
-import { useController } from "UserContext";
+import { useMaterialUIController } from "context";
 
 function DataTableHeadCell({ width, children, sorted, align, ...rest }) {
-  const [controller] = useController();
+  const [controller] = useMaterialUIController();
   const { darkMode } = controller;
 
   return (

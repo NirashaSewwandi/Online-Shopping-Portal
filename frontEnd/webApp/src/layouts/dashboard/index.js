@@ -28,8 +28,7 @@ import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
 
 // Data
-import reportsBarChartData from "./data/reportsBarChartData";
-// ./layouts/dashboard/data/reportsBarChartData";
+import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 
 // Dashboard components
@@ -38,7 +37,7 @@ import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
-  console.log("here---");
+
   return (
     <DashboardLayout>
       <DashboardNavbar />
