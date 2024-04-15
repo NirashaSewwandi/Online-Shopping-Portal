@@ -135,6 +135,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
     // const response = await AuthService.logout();
     // authContext.logout();
     signOut();
+    navigate("/user/login");
   };
 
   return (
