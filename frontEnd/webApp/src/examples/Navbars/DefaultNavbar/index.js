@@ -112,7 +112,7 @@ function DefaultNavbar({ transparent, light, action }) {
           pl={{ xs: 0, lg: 1 }}
         >
           <MDTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-            Material Dashboard 2
+            EasyBuy
           </MDTypography>
         </MDBox>
         {authContext.isAuthenticated && (
@@ -140,17 +140,19 @@ function DefaultNavbar({ transparent, light, action }) {
         )}
         {!authContext.isAuthenticated && (
           <MDBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
-            <DefaultNavbarLink
+            {/* <DefaultNavbarLink
               icon="account_circle"
               name="register"
               route="/auth/register"
               light={light}
-            />
+            /> */}
+            <button>Hi</button>
             <DefaultNavbarLink
               icon="key"
               name="login"
               route="/auth/login"
               light={light}
+            
             />
           </MDBox>
         )}

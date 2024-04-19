@@ -25,10 +25,13 @@ import Icon from "@mui/material/Icon";
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+import { useAuthContext } from "@asgardeo/auth-react";
 
 function DefaultNavbarLink({ icon, name, route, light }) {
+  const { signIn } = useAuthContext();
+
   return (
-    <MDBox
+      <MDBox
       component={Link}
       to={route}
       mx={1}
@@ -55,6 +58,7 @@ function DefaultNavbarLink({ icon, name, route, light }) {
         &nbsp;{name}
       </MDTypography>
     </MDBox>
+   
   );
 }
 

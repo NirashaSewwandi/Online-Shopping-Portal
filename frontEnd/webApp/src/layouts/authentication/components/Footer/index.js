@@ -52,25 +52,25 @@ function Footer({ light }) {
             color={light ? "white" : "text"}
             fontSize={size.sm}
           >
-            &copy; {new Date().getFullYear()}, made with
+            {/* &copy; {new Date().getFullYear()}, made with */}
             <MDBox fontSize={size.md} color={light ? "white" : "dark"} mb={-0.5} mx={0.25}>
               <Icon color="inherit" fontSize="inherit">
-                favorite
+                {/* favorite */}
               </Icon>
             </MDBox>
-            by
+            {/* by */}
             <Link href="https://www.creative-tim.com/" target="_blank">
               <MDTypography variant="button" fontWeight="medium" color={light ? "white" : "dark"}>
-                &nbsp;Creative Tim&nbsp;
+                {/* &nbsp;Creative Tim&nbsp; */}
               </MDTypography>
             </Link>
-            &amp;
+            {/* &amp; */}
             <Link href="https://www.updivision.com/" target="_blank">
               <MDTypography variant="button" fontWeight="medium" color={light ? "white" : "dark"}>
-                &nbsp;UPDIVISION&nbsp;
+                {/* &nbsp;UPDIVISION&nbsp; */}
               </MDTypography>
             </Link>
-            for a better web.
+            {/* for a better web. */}
           </MDBox>
           <MDBox
             component="ul"
@@ -96,7 +96,7 @@ function Footer({ light }) {
                   fontWeight="regular"
                   color={light ? "white" : "dark"}
                 >
-                  UPDIVISION
+                  {/* UPDIVISION */}
                 </MDTypography>
               </Link>
             </MDBox>
@@ -107,7 +107,7 @@ function Footer({ light }) {
                   fontWeight="regular"
                   color={light ? "white" : "dark"}
                 >
-                  Creative Tim
+                  {/* Creative Tim */}
                 </MDTypography>
               </Link>
             </MDBox>
@@ -129,7 +129,7 @@ function Footer({ light }) {
                   fontWeight="regular"
                   color={light ? "white" : "dark"}
                 >
-                  Blog
+                  Contact Us
                 </MDTypography>
               </Link>
             </MDBox>

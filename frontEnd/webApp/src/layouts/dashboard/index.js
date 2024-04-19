@@ -34,10 +34,17 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
+import { useEffect } from "react";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
-
+  const { state } = useAuthContext();
+  useEffect(()=>{
+    const username = state?.username;
+      const email = state?.email;
+      const displayName = state?.displayName;
+      console.log(username,email,displayName);
+  });
   return (
     <DashboardLayout>
       <DashboardNavbar />

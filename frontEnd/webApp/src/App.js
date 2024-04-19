@@ -53,6 +53,11 @@ import { useAuthContext } from "@asgardeo/auth-react";
 export default function App() {
    useEffect(() => {
      if (state?.isAuthenticated) {
+      const username = state?.username;
+      const email = state?.email;
+      const displayName = state?.displayName;
+      console.log(username,email,displayName);
+
        navigate("/dashboard");
      }
    });

@@ -77,7 +77,7 @@ function BasicLayout({ image, children }) {
             <MDBox paddingBottom="3rem" sx={{ textAlign: "center" }}>
               {pathname === "/auth/login" && (
                 <MDBox display="flex" width="100%" justifyContent="center" sx={{ zIndex: "99" }}>
-                  <MDBox
+                  {/* <MDBox
                     display="flex"
                     flexDirection="column"
                     justifyContent="center"
@@ -126,7 +126,7 @@ function BasicLayout({ image, children }) {
                         </ListItem>
                       </List>
                     </MDBox>
-                  </MDBox>
+                  </MDBox> */}
                 </MDBox>
               )}
               <MDBox px={1} width="100%" mx="auto" paddingTop="1rem">
