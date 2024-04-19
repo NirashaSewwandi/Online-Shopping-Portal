@@ -35,6 +35,7 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 import { useEffect } from "react";
+import { useAuthContext } from "@asgardeo/auth-react";
 
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
