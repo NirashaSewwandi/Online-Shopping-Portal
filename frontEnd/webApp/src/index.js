@@ -23,8 +23,8 @@ import { AuthProvider } from "@asgardeo/auth-react";
 // Material Dashboard 2 React Context Provider
 import { MaterialUIControllerProvider } from "context";
 const config = {
-  signInRedirectURL:
-    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
+  signInRedirectURL: "http://localhost:3000/",
+  // "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
   signOutRedirectURL:
     "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
   clientID: "sLaZq4Byn23qXR0vHn9o33DlF88a",
@@ -34,6 +34,8 @@ const config = {
     "profile",
     "app_roles",
     "groups",
+    "email",
+    "displayName",
     // "urn:interns:identitycheckserviceident:check_identity urn:interns:policecheckservicepolicev:police_ver_check urn:interns:addresscheckserviceaddres:check_address urn:interns:gramaapiservicerequests91:reqeust_reaction urn:interns:gramaapiservicerequests91:get_all_requests urn:interns:gramaapiservicerequests91:post_a_request",
   ],
   // resourceServerURLs: [

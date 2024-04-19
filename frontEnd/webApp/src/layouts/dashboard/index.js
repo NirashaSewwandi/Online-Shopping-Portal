@@ -40,15 +40,18 @@ import { useAuthContext } from "@asgardeo/auth-react";
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
   const { state } = useAuthContext();
+  const displayName = state?.displayName;
+
   useEffect(()=>{
     const username = state?.username;
       const email = state?.email;
       const displayName = state?.displayName;
-      console.log(username,email,displayName);
+      console.log(username,email,displayName,"=====");
   });
   return (
     <DashboardLayout>
       <DashboardNavbar />
+      <h3>Hello, {displayName.charAt(0).toUpperCase()}{displayName.substring(1)}</h3>
       <MDBox py={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={3}>

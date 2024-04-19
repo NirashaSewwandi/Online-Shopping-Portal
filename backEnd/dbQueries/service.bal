@@ -32,7 +32,7 @@ final mongodb:Client mongoDb = check new ({
     connection: string `mongodb+srv://nirasha:4Qh3lrdm8STII2Ov@cluster0.ugsiwjk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`    
 });
 
-service on new http:Listener(9091) {
+service /newUser on new http:Listener(9091) {
     private final mongodb:Database moviesDb;
 
     function init() returns error? {

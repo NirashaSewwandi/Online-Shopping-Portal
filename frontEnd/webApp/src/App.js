@@ -51,19 +51,10 @@ import { Helmet } from "react-helmet";
 import { useAuthContext } from "@asgardeo/auth-react";
 
 export default function App() {
-   useEffect(() => {
-     if (state?.isAuthenticated) {
-      const username = state?.username;
-      const email = state?.email;
-      const displayName = state?.displayName;
-      console.log(username,email,displayName);
-
-       navigate("/dashboard");
-     }
-   });
+   
 
   // const authContext = useContext(AuthContext);
-  const { state } = useAuthContext();
+  const { state, getBasicUserInfo } = useAuthContext();
 
   const [controller, dispatch] = useMaterialUIController();
   const {
@@ -85,6 +76,18 @@ export default function App() {
   useEffect(() => {
     setIsDemo(process.env.REACT_APP_IS_DEMO === "true");
   }, []);
+
+  useEffect(() => {
+    if (state?.isAuthenticated) {
+      // const username = state?.username;
+      // const email = state?.email;
+      // const displayName = state?.displayName;
+      // const data = state.toString();
+      // console.log(username, email, displayName,data);
+
+      navigate("/dashboard");
+    }
+  });
 
   // Cache for the rtl
   useMemo(() => {
