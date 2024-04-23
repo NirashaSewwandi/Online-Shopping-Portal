@@ -55,7 +55,7 @@ export default function App() {
    
 
   // const authContext = useContext(AuthContext);
-  const { state, getBasicUserInfo,httpRequest,getAccessToken } = useAuthContext();
+  const { state, getBasicUserInfo,httpRequest,getAccessToken,refreshAccessToken } = useAuthContext();
 
   const [controller, dispatch] = useMaterialUIController();
   const {
@@ -81,6 +81,7 @@ export default function App() {
 
 
   const handleNewUser = async (e) => {
+    refreshAccessToken();
     const token = await getAccessToken();
     try {
       
