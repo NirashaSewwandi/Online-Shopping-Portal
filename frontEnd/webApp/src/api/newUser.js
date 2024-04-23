@@ -3,8 +3,11 @@
 export const newUser = {
   headers: {
     Accept: "application/json",
+    Authorization: '',
+    
     // apikey: 
   },
+  
   attachToken: true,
   withCredentials: true,
   method: "POST",

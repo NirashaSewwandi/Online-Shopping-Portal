@@ -55,7 +55,7 @@ export default function App() {
    
 
   // const authContext = useContext(AuthContext);
-  const { state, getBasicUserInfo,httpRequest } = useAuthContext();
+  const { state, getBasicUserInfo,httpRequest,getAccessToken } = useAuthContext();
 
   const [controller, dispatch] = useMaterialUIController();
   const {
@@ -78,8 +78,10 @@ export default function App() {
     setIsDemo(process.env.REACT_APP_IS_DEMO === "true");
   }, []);
 
+
+
   const handleNewUser = async (e) => {
-   
+    const token = await getAccessToken();
     try {
       
 
@@ -90,6 +92,7 @@ export default function App() {
       };
       const newUserConfig = { ...newUser };
       newUserConfig.data = userData;
+      newUserConfig.headers.Authorization = `Bearer ${token}`;
       const { data } = await httpRequest(newUserConfig);
       console.log(data+"here==");
       
