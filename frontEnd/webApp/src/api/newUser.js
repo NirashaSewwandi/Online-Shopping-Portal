@@ -3,7 +3,7 @@
 export const newUser = {
   headers: {
     Accept: "application/json",
-    Authorization: '',
+    Authorization: "",
 
     // apikey:
   },
