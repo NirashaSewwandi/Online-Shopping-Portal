@@ -24,8 +24,7 @@ import { AuthProvider } from "@asgardeo/auth-react";
 import { MaterialUIControllerProvider } from "context";
 const config = {
   // signInRedirectURL: "http://localhost:3000/",
-  signInRedirectURL:
-    "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
+  signInRedirectURL:  "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
   signOutRedirectURL:
     "https://b5a3c6ff-215f-4192-a3b4-351fba062ad6.e1-us-east-azure.choreoapps.dev/",
   clientID: "sLaZq4Byn23qXR0vHn9o33DlF88a",
@@ -44,6 +43,7 @@ const config = {
     "https://02c6919b-de66-4977-ad24-2353ebcd8048-dev.e1-us-east-azure.choreoapis.dev/mhmp/new-user-api/newuser-2ab/v1.0/newUser",
     "http://new-user-api-608428337:9091/newUser",
     "https://02c6919b-de66-4977-ad24-2353ebcd8048-dev.e1-us-east-azure.choreoapis.dev/mhmp/add-new-user/newuser-2ab/v1.0",
+    "https://02c6919b-de66-4977-ad24-2353ebcd8048-dev.e1-us-east-azure.choreoapis.dev/mhmp/add-new-user/newuser-2ab/v1",
     // https://02c6919b-de66-4977-ad24-2353ebcd8048-dev.e1-us-east-azure.choreoapis.dev/mhmp/new-user-api/newuser-2ab/v1.0
   ],
 };
