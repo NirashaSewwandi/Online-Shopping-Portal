@@ -126,5 +126,4 @@ public type User record {|
     // readonly _id;
     string email;
     string username;
-    string password;
 |};

@@ -38,13 +38,12 @@ const config = {
     "displayName",
     // "urn:interns:identitycheckserviceident:check_identity urn:interns:policecheckservicepolicev:police_ver_check urn:interns:addresscheckserviceaddres:check_address urn:interns:gramaapiservicerequests91:reqeust_reaction urn:interns:gramaapiservicerequests91:get_all_requests urn:interns:gramaapiservicerequests91:post_a_request",
   ],
-  // resourceServerURLs: [
-  //   "https://cf3a4176-54c9-4547-bcd6-c6fe400ad0d8-dev.e1-us-east-azure.choreoapis.dev/maoe/grama-api-service/requests-915/1.0.0",
-  //   "https://cf3a4176-54c9-4547-bcd6-c6fe400ad0d8-dev.e1-us-east-azure.choreoapis.dev/maoe/grama-api-service/requests-915/1.0.0/validate",
-  //   "https://cf3a4176-54c9-4547-bcd6-c6fe400ad0d8-dev.e1-us-east-azure.choreoapis.dev/maoe/slacknotifications/endpoint-7070-070/1.0.0/sendNotifications",
-  //   "https://cf3a4176-54c9-4547-bcd6-c6fe400ad0d8-dev.e1-us-east-azure.choreoapis.dev/maoe/grama-api-service/requests-915/1.0.0/police-report",
-  //   " https://cf3a4176-54c9-4547-bcd6-c6fe400ad0d8-dev.e1-us-east-azure.choreoapis.dev/maoe/grama-api-service/requests-915/1.0.0/address-report",
-  // ],
+  resourceServerURLs: [
+    "https://02c6919b-de66-4977-ad24-2353ebcd8048-dev.e1-us-east-azure.choreoapis.dev/mhmp/new-user-api/newuser-2ab/v1.0",
+    "https://02c6919b-de66-4977-ad24-2353ebcd8048-dev.e1-us-east-azure.choreoapis.dev/mhmp/new-user-api/newuser-2ab/v1.0/newUser",
+    "http://new-user-api-608428337:9091/newUser",
+    // https://02c6919b-de66-4977-ad24-2353ebcd8048-dev.e1-us-east-azure.choreoapis.dev/mhmp/new-user-api/newuser-2ab/v1.0
+  ],
 };
 
 const rootElement = document.getElementById("root");

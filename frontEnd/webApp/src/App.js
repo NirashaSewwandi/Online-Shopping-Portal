@@ -49,12 +49,13 @@ import UserProfile from "layouts/user-profile";
 import UserManagement from "layouts/user-management";
 import { Helmet } from "react-helmet";
 import { useAuthContext } from "@asgardeo/auth-react";
+import { newUser } from "./api/newUser";
 
 export default function App() {
    
 
   // const authContext = useContext(AuthContext);
-  const { state, getBasicUserInfo } = useAuthContext();
+  const { state, getBasicUserInfo,httpRequest } = useAuthContext();
 
   const [controller, dispatch] = useMaterialUIController();
   const {
@@ -77,8 +78,37 @@ export default function App() {
     setIsDemo(process.env.REACT_APP_IS_DEMO === "true");
   }, []);
 
+  const handleNewUser = async (e) => {
+   
+    try {
+      
+
+      const userData = {
+        username: state.displayName,
+        email: state.email,
+        
+      };
+      const newUserConfig = { ...newUser };
+      newUserConfig.data = userData;
+      const { data } = await httpRequest(newUserConfig);
+      console.log(data+"here==");
+      
+
+    
+    } catch (err) {
+      console.log(err);
+     
+    }
+  };
   useEffect(() => {
     if (state?.isAuthenticated) {
+      handleNewUser();
+      
+    }
+  },[]);
+  useEffect(() => {
+    if (state?.isAuthenticated) {
+      
       // const username = state?.username;
       // const email = state?.email;
       // const displayName = state?.displayName;
