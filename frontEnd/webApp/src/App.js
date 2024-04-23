@@ -81,7 +81,7 @@ export default function App() {
 
 
   const handleNewUser = async (e) => {
-    refreshAccessToken();
+    // refreshAccessToken();
     const token = await getAccessToken();
     try {
       
