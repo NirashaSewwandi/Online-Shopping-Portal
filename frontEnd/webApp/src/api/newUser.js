@@ -8,8 +8,8 @@ export const newUser = {
     // apikey:
   },
 
-  // attachToken: true,
-  // withCredentials: true,
+  attachToken: true,
+  withCredentials: true,
   method: "POST",
   // url: "http://new-user-api-608428337:9091/newUser",
 
